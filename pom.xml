@@ -5,8 +5,39 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.bigchaindb</groupId>
 	<artifactId>cryptoconditions</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
+	<packaging>jar</packaging>
 	
+	<name>cryptoconditions</name>
+  	<description>Java implementation of condition variation and fulfillment</description>
+  	<url>http://github.com/bigchaindb/java-crypto-conditions</url>
+	
+	<licenses>
+	    <license>
+	      <name>The Apache Software License, Version 2.0</name>
+	      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+	    </license>
+  	</licenses>
+  	
+  	<developers>
+	    <developer>
+	      <name>Manan Patel</name>
+	      <email>manan@bigchaindb.com</email>
+	      <organization>Bigchaindb</organization>
+	      <organizationUrl>http://www.bigchaindb.com</organizationUrl>
+	    </developer>
+  	</developers>
+  
+	  <scm>
+	    <connection>scm:git:git://github.com/bigchaindb/java-crypto-conditions.git</connection>
+	    <developerConnection>scm:git:ssh://github.com:bigchaindb/java-crypto-conditions.git</developerConnection>
+	    <url>http://github.com/bigchaindb/java-crypto-conditions/tree/master</url>
+	  </scm>
+	  
+	<properties>
+  		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ 	</properties>
+ 	
 	<build>
 		<plugins>
 			<plugin>
@@ -17,6 +48,31 @@
 					<source>1.7</source>
 					<target>1.7</target>
 				</configuration>
+			</plugin>
+			<plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-source-plugin</artifactId>
+			  <version>2.2.1</version>
+			  <executions>
+			    <execution>
+			      <id>attach-sources</id>
+			      <goals>
+			        <goal>jar</goal>
+			      </goals>
+			    </execution>
+			  </executions>
+			</plugin>
+			<plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-javadoc-plugin</artifactId>
+			  <executions>
+			    <execution>
+			      <id>attach-javadocs</id>
+			      <goals>
+			        <goal>jar</goal>
+			      </goals>
+			    </execution>
+			  </executions>
 			</plugin>
 		</plugins>
 	</build>
